@@ -131,7 +131,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                                 {description}
                             </Text>
                         )}
-                        {content?.trim() && (
+                        {/* {content?.trim() && (
                             <SmartLink
                                 suffixIcon="chevronRight"
                                 style={{margin: '0', width: 'fit-content'}}
@@ -141,7 +141,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                                        {t("projectCard.label")}
                                     </Text>
                             </SmartLink>
-                        )}
+                        )} */}
                     </Flex>
                 )}
             </Flex>

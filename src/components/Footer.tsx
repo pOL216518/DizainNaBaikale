@@ -27,11 +27,11 @@ export const Footer = () => {
                         © {currentYear} /
                     </Text>
                     <Text paddingX="4">
-                        {person.name}
+                        Baikal
                     </Text>
                     <Text onBackground="neutral-weak">
                         {/* Usage of this template requires attribution. Please don't remove the link to Once UI. */}
-                        / Build your portfolio with <SmartLink style={{marginLeft: '-0.125rem'}} href="https://once-ui.com/templates/magic-portfolio">Once UI</SmartLink>
+                        / Сайт сделал <SmartLink style={{marginLeft: '-0.125rem'}} href="https://vk.com/sge_21">Genius</SmartLink>
                     </Text>
                 </Text>
                 <Flex

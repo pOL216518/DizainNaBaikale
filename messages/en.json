@@ -3,7 +3,7 @@
         "role": "Design Engineer"
     },
     "newsletter": {
-        "title": "Subscribe to {firstName}'s Newsletter",
+        "title": "",
         "description": "I occasionally write about design, technology, and share thoughts on the intersection of creativity and engineering",
         "button": "Sign up"
     },
@@ -16,7 +16,7 @@
     },
     "about": {
         "label": "About",
-        "title": "About me",
+        "title": "Обо мне",
         "description": "Meet {name}, {role} from {location}",
         "intro": {
             "title": "Introduction",
@@ -76,6 +76,6 @@
         "description": "A photo collection by {name}"
     },
     "projectCard": {
-        "label": "Read Case Study"
+        "label": "Узнать больше"
     }
 }

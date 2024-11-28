@@ -1,15 +1,15 @@
 import { InlineCode } from "@/once-ui/components";
 
 const person = {
-    firstName: 'Selene',
-    lastName:  'Yu',
+    firstName: 'Евгений',
+    lastName:  'Ершов',
     get name() {
         return `${this.firstName} ${this.lastName}`;
     },
-    role:      'Design Engineer',
+    role:      'Frontend developer',
     avatar:    '/images/avatar.jpg',
-    location:  'Asia/Jakarta',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-    languages: ['English', 'Bahasa']  // optional: Leave the array empty if you don't want to display languages
+    location:  '',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+    languages: []  // optional: Leave the array empty if you don't want to display languages
 }
 
 const newsletter = {
@@ -21,39 +21,39 @@ const newsletter = {
 const social = [
     // Links are automatically displayed.
     // Import new icons in /once-ui/icons.ts
-    {
-        name: 'GitHub',
-        icon: 'github',
-        link: 'https://github.com/once-ui-system/nextjs-starter',
-    },
-    {
-        name: 'LinkedIn',
-        icon: 'linkedin',
-        link: 'https://www.linkedin.com/company/once-ui/',
-    },
-    {
-        name: 'X',
-        icon: 'x',
-        link: '',
-    },
-    {
-        name: 'Email',
-        icon: 'email',
-        link: 'mailto:example@gmail.com',
-    },
+    // {
+    //     name: 'GitHub',
+    //     icon: 'github',
+    //     link: 'https://github.com/once-ui-system/nextjs-starter',
+    // },
+    // {
+    //     name: 'LinkedIn',
+    //     icon: 'linkedin',
+    //     link: 'https://www.linkedin.com/company/once-ui/',
+    // },
+    // {
+    //     name: 'X',
+    //     icon: 'x',
+    //     link: '',
+    // },
+    // {
+    //     name: 'Email',
+    //     icon: 'email',
+    //     link: 'mailto:example@gmail.com',
+    // },
 ]
 
 const home = {
-    label: 'Home',
-    title: `${person.name}'s Portfolio`,
-    description: `Portfolio website showcasing my work as a ${person.role}`,
-    headline: <>Design engineer and builder</>,
-    subline: <>I'm Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I craft intuitive<br/> user experiences. After hours, I build my own projects.</>
+    label: 'Главная страница',
+    title: `BaikalIsBeatiful`,
+    description: `${person.role}`,
+    headline: <>Байкал — жемчужина Сибири</>,
+    subline: <>Добро пожаловать на страницу, посвящённую самому глубокому озеру мира — <InlineCode>Байкалу</InlineCode>!  Этот природный шедевр привлекает путешественников со всех уголков земного шара своими величественными пейзажами,<br/> богатой историей и уникальной экосистемой.</>
 }
 
 const about = {
-    label: 'About',
-    title: 'About me',
+    label: 'Обо мне',
+    title: 'Обо мне',
     description: `Meet ${person.name}, ${person.role} from ${person.location}`,
     tableOfContent: {
         display: true,
@@ -68,72 +68,89 @@ const about = {
     },
     intro: {
         display: true,
-        title: 'Introduction',
-        description: <>Selene is a Jakarta-based design engineer with a passion for transforming complex challenges into simple, elegant design solutions. Her work spans digital interfaces, interactive experiences, and the convergence of design and technology.</>
+        title: 'Введение',
+        description: <>Привет! Меня зовут Евгений Ершов, этим летом я отправился в Энхалук, чтобы освоить основы веб-дизайна. Это путешествие стало для меня вдохновляющим опытом: уникальная природа Байкала и атмосфера творчества помогли открыть новые горизонты в моей любимой области.</>
     },
     work: {
         display: true, // set to false to hide this section
-        title: 'Work Experience',
+        title: 'Мой опыт и навыки в веб-дизайне',
         experiences: [
             {
-                company: 'FLY',
-                timeframe: '2022 - Present',
-                role: 'Senior Design Engineer',
+                company: 'Работа с Figma',
+                timeframe: '',
+                role: 'В процессе обучения я научился:',
                 achievements: [
-                    <>Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user engagement and 30% faster load times.</>,
-                    <>Spearheaded the integration of AI tools into design workflows, enabling designers to iterate 50% faster.</>
+                    <>Разрабатывать удобные и интуитивно понятные прототипы.</>,
+                    <>Использовать дизайн-системы для обеспечения единообразия стиля.</>,
+                    <>Работать с компонентами и взаимодействиями, что позволяет ускорить процесс создания макетов.</>
                 ],
                 images: [ // optional: leave the array empty if you don't want to display images
                     {
-                        src: '/images/projects/project-01/cover-01.jpg',
+                        src: '/images/projects/project-01/figma.jpeg',
                         alt: 'Once UI Project',
                         width: 16,
                         height: 9
                     }
                 ]
             },
-            {
-                company: 'Creativ3',
-                timeframe: '2018 - 2022',
-                role: 'Lead Designer',
-                achievements: [
-                    <>Developed a design system that unified the brand across multiple platforms, improving design consistency by 40%.</>,
-                    <>Led a cross-functional team to launch a new product line, contributing to a 15% increase in overall company revenue.</>
-                ],
-                images: [ ]
-            }
+            // {
+            //     company: 'Creativ3',
+            //     timeframe: '2018 - 2022',
+            //     role: 'Lead Designer',
+            //     achievements: [
+            //         <>Developed a design system that unified the brand across multiple platforms, improving design consistency by 40%.</>,
+            //         <>Led a cross-functional team to launch a new product line, contributing to a 15% increase in overall company revenue.</>
+            //     ],
+            //     images: [ ]
+            // }
         ]
     },
     studies: {
         display: true, // set to false to hide this section
-        title: 'Studies',
+        title: 'Эмоции и знакомства на Байкале',
         institutions: [
             {
-                name: 'University of Jakarta',
-                description: <>Studied software engineering.</>,
+                name: '',
+                description: <>Путешествие на Байкал стало для меня настоящим источником вдохновения и ярких эмоций. Уникальная природа, чистый воздух и спокойствие этого места создавали особую атмосферу, в которой легко было открыться чему-то новому.</>,
             },
             {
-                name: 'Build the Future',
-                description: <>Studied online marketing and personal branding.</>,
+                name: '',
+                description: <>Находясь рядом с Байкалом, я познакомился с удивительными людьми, каждый из которых оставил свой след в моём сердце. Совместные беседы, обмен идеями и совместное творчество наполнили эти дни теплом и радостью.</>,
+            },
+            {
+                name: '',
+                description: <>Эти моменты стали для меня не просто отдыхом, а возможностью обрести новых друзей, вдохновиться историей и культурой этого региона, а также почувствовать, как природа объединяет нас всех. Байкал подарил мне воспоминания, которые я буду хранить всегда.</>,
             }
         ]
     },
     technical: {
         display: true, // set to false to hide this section
-        title: 'Technical skills',
+        title: 'Фотографии',
         skills: [
             {
-                title: 'Figma',
-                description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
+                // title: 'Figma',
+                //  description: <>Данные фотографи которые были сделаны во врмя поездки.</>,
                 images: [
                     {
-                        src: '/images/projects/project-01/cover-02.jpg',
+                        src: '/images/projects/project-01/photo1.jpg',
                         alt: 'Project image',
                         width: 16,
                         height: 9
                     },
                     {
-                        src: '/images/projects/project-01/cover-03.jpg',
+                        src: '/images/projects/project-01/photo2.jpg',
+                        alt: 'Project image',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/project-01/baikal7.jpg',
+                        alt: 'Project image',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/project-01/baikal8.jpg',
                         alt: 'Project image',
                         width: 16,
                         height: 9
@@ -141,15 +158,15 @@ const about = {
                 ]
             },
             {
-                title: 'Next.js',
-                description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
+                title: '',
+                description: <></>,
                 images: [
-                    {
-                        src: '/images/projects/project-01/cover-04.jpg',
-                        alt: 'Project image',
-                        width: 16,
-                        height: 9
-                    },
+                    // {
+                    //     src: '/images/projects/project-01/cover-04.jpg',
+                    //     alt: 'Project image',
+                    //     width: 16,
+                    //     height: 9
+                    // },
                 ]
             }
         ]
@@ -173,78 +190,88 @@ const work = {
 }
 
 const gallery = {
-    label: 'Gallery',
+    label: 'Галерея',
     title: 'My photo gallery',
     description: `A photo collection by ${person.name}`,
     // Images from https://pexels.com
     images: [
         { 
-            src: '/images/gallery/img-01.jpg', 
+            src: '/images/gallery/gallery1.jpg', 
             alt: 'image',
             orientation: 'vertical'
         },
         { 
-            src: '/images/gallery/img-02.jpg', 
+            src: '/images/gallery/gallery2.jpg', 
             alt: 'image',
             orientation: 'horizontal'
         },
         { 
-            src: '/images/gallery/img-03.jpg', 
+            src: '/images/gallery/gallery3.jpg', 
             alt: 'image',
             orientation: 'vertical'
         },
         { 
-            src: '/images/gallery/img-04.jpg', 
+            src: '/images/gallery/gallery4.jpg', 
             alt: 'image',
             orientation: 'horizontal'
         },
         { 
-            src: '/images/gallery/img-05.jpg', 
+            src: '/images/gallery/gallery5.jpg', 
             alt: 'image',
             orientation: 'horizontal'
         },
         { 
-            src: '/images/gallery/img-06.jpg', 
+            src: '/images/gallery/gallery6.jpg', 
             alt: 'image',
             orientation: 'vertical'
         },
         { 
-            src: '/images/gallery/img-07.jpg', 
+            src: '/images/gallery/gallery7.jpg', 
             alt: 'image',
             orientation: 'horizontal'
         },
         { 
-            src: '/images/gallery/img-08.jpg', 
+            src: '/images/gallery/gallery8.jpg', 
             alt: 'image',
             orientation: 'vertical'
         },
         { 
-            src: '/images/gallery/img-09.jpg', 
+            src: '/images/gallery/gallery9.jpg', 
             alt: 'image',
             orientation: 'horizontal'
         },
         { 
-            src: '/images/gallery/img-10.jpg', 
+            src: '/images/gallery/gallery10.jpg', 
             alt: 'image',
             orientation: 'horizontal'
         },
         { 
-            src: '/images/gallery/img-11.jpg', 
-            alt: 'image',
-            orientation: 'vertical'
-        },
-        { 
-            src: '/images/gallery/img-12.jpg', 
+            src: '/images/gallery/gallery11.jpg', 
             alt: 'image',
             orientation: 'horizontal'
         },
         { 
-            src: '/images/gallery/img-13.jpg', 
+            src: '/images/gallery/gallery12.jpg', 
             alt: 'image',
             orientation: 'horizontal'
         },
         { 
-            src: '/images/gallery/img-14.jpg', 
+            src: '/images/gallery/gallery13.jpg', 
+            alt: 'image',
+            orientation: 'horizontal'
+        },
+        { 
+            src: '/images/gallery/gallery14.jpg', 
+            alt: 'image',
+            orientation: 'horizontal'
+        },
+        { 
+            src: '/images/gallery/gallery15.jpg', 
+            alt: 'image',
+            orientation: 'horizontal'
+        },
+        { 
+            src: '/images/gallery/gallery16.jpg', 
             alt: 'image',
             orientation: 'horizontal'
         },
