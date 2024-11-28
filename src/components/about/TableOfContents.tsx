@@ -8,7 +8,7 @@ interface TableOfContentsProps {
     structure: {
         title: string;
         display: boolean;
-        items: string[];
+        items: (string | undefined)[]; 
     }[];
     about: {
         tableOfContent: {
@@ -45,27 +45,29 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ structure, about }) =
             position="fixed"
             paddingLeft="24" gap="32"
             direction="column" hide="m">
-            {structure
-                .filter(section => section.display)
-                .map((section, sectionIndex) => (
-                <Flex key={sectionIndex} gap="12" direction="column">
-                    <Flex
-                        style={{ cursor: 'pointer' }}
-                        className={styles.hover}
-                        gap="8"
-                        alignItems="center"
-                        onClick={() => scrollTo(section.title, 80)}>
-                        <Flex
-                            height="1" minWidth="16"
-                            background="neutral-strong">
-                        </Flex>
-                        <Text>
-                            {section.title}
-                        </Text>
-                    </Flex>
-                    {about.tableOfContent.subItems && (
-                        <>
-                            {section.items.map((item, itemIndex) => (
+           {structure
+    .filter(section => section.display)
+    .map((section, sectionIndex) => (
+        <Flex key={sectionIndex} gap="12" direction="column">
+            <Flex
+                style={{ cursor: 'pointer' }}
+                className={styles.hover}
+                gap="8"
+                alignItems="center"
+                onClick={() => scrollTo(section.title, 80)}>
+                <Flex
+                    height="1" minWidth="16"
+                    background="neutral-strong">
+                </Flex>
+                <Text>
+                    {section.title}
+                </Text>
+            </Flex>
+                {about.tableOfContent.subItems && (
+                    <>
+                        {section.items
+                            .filter((item): item is string => item !== undefined) // Фильтрация undefined
+                            .map((item, itemIndex) => (
                                 <Flex
                                     hide="l"
                                     key={itemIndex}
@@ -83,10 +85,10 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ structure, about }) =
                                     </Text>
                                 </Flex>
                             ))}
-                        </>
-                    )}
-                </Flex>
-            ))}
+                    </>
+                )}
+            </Flex>
+        ))}
         </Flex>
     );
 };
