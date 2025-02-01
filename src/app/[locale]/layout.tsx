@@ -101,7 +101,6 @@ export default async function RootLayout({
 	return (
 		<NextIntlClientProvider messages={messages}>
 			<GoogleTagManager /> 
-			<YandexMetrika />
 			<Flex
 				as="html" lang="en"
 				background="page"
