@@ -8,6 +8,7 @@ import { Mailchimp } from '@/components';
 import { Posts } from '@/components/blog/Posts';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
+import { GoogleTagManager } from '@/components/GoogleTagManager';
 
 export async function generateMetadata(
 	{params: {locale}}: { params: { locale: string }}
@@ -131,6 +132,7 @@ export default function Home(
 			<RevealFx translateY="16" delay={0.6}>
 				<Projects range={[1,1]} locale={locale}/>
 			</RevealFx>
+			<GoogleTagManager /> 
 			{/* {routes['/blog'] && (
 				<Flex
 					fillWidth gap="24"
