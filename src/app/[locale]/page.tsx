@@ -9,6 +9,7 @@ import { Posts } from '@/components/blog/Posts';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 import { GoogleTagManager } from '@/components/GoogleTagManager';
+import { YandexMetrika } from "@/components/YandexMetrika"
 
 export async function generateMetadata(
 	{params: {locale}}: { params: { locale: string }}
@@ -133,24 +134,8 @@ export default function Home(
 				<Projects range={[1,1]} locale={locale}/>
 			</RevealFx>
 			<GoogleTagManager /> 
-			{/* {routes['/blog'] && (
-				<Flex
-					fillWidth gap="24"
-					mobileDirection="column">
-					<Flex flex={1} paddingLeft="l">
-						<Heading
-							as="h2"
-							variant="display-strong-xs"
-							wrap="balance">
-							Latest from the blog
-						</Heading>
-					</Flex>
-					<Flex
-						flex={3} paddingX="20">
-						<Posts range={[1,2]} columns="2" locale={locale}/>
-					</Flex>
-				</Flex>
-			)} */}
+			<YandexMetrika />
+			
 			<Projects range={[2]} locale={locale}/>
 			{/* { newsletter.display &&
 				<Mailchimp newsletter={newsletter} />

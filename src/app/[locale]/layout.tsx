@@ -17,6 +17,7 @@ import { renderContent } from "@/app/resources";
 import { Background, Flex } from "@/once-ui/components";
 
 import { GoogleTagManager } from '@/components/GoogleTagManager'
+import { YandexMetrika } from "@/components/YandexMetrika";
 
 export async function generateMetadata(
 	{ params: { locale }}: { params: { locale: string }}
@@ -100,6 +101,7 @@ export default async function RootLayout({
 	return (
 		<NextIntlClientProvider messages={messages}>
 			<GoogleTagManager /> 
+			<YandexMetrika />
 			<Flex
 				as="html" lang="en"
 				background="page"
