@@ -16,6 +16,8 @@ import { routing } from "@/i18n/routing";
 import { renderContent } from "@/app/resources";
 import { Background, Flex } from "@/once-ui/components";
 
+import { GoogleTagManager } from '@/components/GoogleTagManager'
+
 export async function generateMetadata(
 	{ params: { locale }}: { params: { locale: string }}
 ) {
@@ -23,7 +25,12 @@ export async function generateMetadata(
 	const t = await getTranslations();
 	const { person, home } = renderContent(t);
 
+	
+
 	return {
+
+		
+
 		metadataBase: new URL(`https://${baseURL}/${locale}`),
 		title: home.title,
 		description: home.description,
@@ -92,6 +99,7 @@ export default async function RootLayout({
 	const messages = await getMessages();
 	return (
 		<NextIntlClientProvider messages={messages}>
+			<GoogleTagManager /> 
 			<Flex
 				as="html" lang="en"
 				background="page"
